@@ -64,10 +64,10 @@ test_script:
   # Copy over model files needed for testing.
   # TODO this is temporary until we have a proper way to distribute models.
   # md -Force: creates directories (mkdir -p).
-  - md -Force C:\OpenSim\Models\Arm26
-  - copy OpenSim/Tools/Test/arm26.osim %OPENSIM_HOME%\Models\Arm26\
-  - md -Force C:\OpenSim\Models\Gait10dof18musc
-  - copy Applications/CMC/test/gait10dof18musc_subject01.osim %OPENSIM_HOME%\Models\Gait10dof18musc\gait10dof18musc.osim
+  #- md -Force C:\OpenSim\Models\Arm26
+  #- copy OpenSim/Tools/Test/arm26.osim %OPENSIM_HOME%\Models\Arm26\
+  #- md -Force C:\OpenSim\Models\Gait10dof18musc
+  #- copy Applications/CMC/test/gait10dof18musc_subject01.osim %OPENSIM_HOME%\Models\Gait10dof18musc\gait10dof18musc.osim
   
   # Move to the installed location of the python package.
   - cd %OPENSIM_HOME%\sdk\python

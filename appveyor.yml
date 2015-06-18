@@ -32,6 +32,9 @@ install:
   ## Use Chocolatey to install SWIG.
   - choco install swig
   
+  ## Install python-nose for python testing.
+  - pip install nose
+  
   ## Simbody.
   # Simbody's installation is pushed to our Appveyor NuGet account feed.
   # Must use version 0.0.0, otherwise, nuget will use nuget.org, where

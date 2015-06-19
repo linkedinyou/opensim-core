@@ -32,17 +32,17 @@ install:
     
   ## To remote-desktop into the virtual machine.
   # Get a script that will allow remote desktop.
-  - git clone -q https://github.com/appveyor/ci.git
+  #- git clone -q https://github.com/appveyor/ci.git
   # This script will give an IP address, username, and password
   # to use to log into the virtual machine using Windows remote desktop.
-  - ps: .\ci\scripts\enable-rdp.ps1
+  #- ps: .\ci\scripts\enable-rdp.ps1
   
   # Copy over model files needed for testing.
   # TODO this is temporary until we have a proper way to distribute models.
   # md -Force: creates directories (mkdir -p).
-  - md -Force C:\OpenSim\Models\Arm26
+  - md C:\OpenSim\Models\Arm26
   - copy OpenSim\Tools\Test\arm26.osim C:\OpenSim\Models\Arm26\arm26.osim
-  - md -Force C:\OpenSim\Models\Gait10dof18musc
+  - md C:\OpenSim\Models\Gait10dof18musc
   - copy Applications\CMC\test\gait10dof18musc_subject01.osim C:\OpenSim\Models\Gait10dof18musc\gait10dof18musc.osim
   
   ## Use Chocolatey to install SWIG.

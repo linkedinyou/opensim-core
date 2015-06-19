@@ -25,17 +25,17 @@ init:
   - SET PATH=C:\Program Files (x86)\MSBuild\12.0\bin\;C:\Python27-x64\Scripts;%PATH%
   - SET OPENSIM_HOME=C:\OpenSim
   
+nuget:
+  account_feed: true
+
+install:
+    
   ## To remote-desktop into the virtual machine.
   # Get a script that will allow remote desktop.
   - git clone -q https://github.com/appveyor/ci.git
   # This script will give an IP address, username, and password
   # to use to log into the virtual machine using Windows remote desktop.
   - ps: .\ci\scripts\enable-rdp.ps1
-  
-nuget:
-  account_feed: true
-
-install:
   
   # Copy over model files needed for testing.
   # TODO this is temporary until we have a proper way to distribute models.
